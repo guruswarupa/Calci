@@ -31,35 +31,31 @@
             android:orientation="horizontal"
             android:weightSum="4">
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/button_under_root"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
-                />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/button_power"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
-                />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/button_percentage"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
-                />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/button_del"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
+                android:id="@+id/button_del"
+                android:onClick="operationFn"
+                style="@style/button_style" />
+
+            <Button
+                android:text="@string/button_power"
+                android:id="@+id/button_power"
+                android:onClick="operationFn"
+                style="@style/button_style"
+                />
+
+            <Button
+                android:text="@string/button_percentage"
+                android:id="@+id/button_percentage"
+                android:onClick="operationFn"
+                style="@style/button_style"
+                />
+
+            <Button
+                android:text="@string/button_clr"
+                android:id="@+id/button_clr"
+                android:onClick="operationFn"
+                android:layout_marginEnd="@dimen/margin_eight"
+                style="@style/button_style"
                 />
         </LinearLayout>
 
@@ -69,35 +65,29 @@
             android:orientation="horizontal"
             android:weightSum="4">
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/button_seven"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
+                android:id="@+id/button_seven"
+                android:onClick="operationFn"
+                style="@style/button_style"
                 />
-
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/button_eight"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
+                android:id="@+id/button_eight"
+                android:onClick="operationFn"
+                style="@style/button_style"
                 />
-
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/button_nine"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
+                android:id="@+id/button_nine"
+                android:onClick="operationFn"
+                style="@style/button_style"
                 />
-
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/button_divide"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
+                android:id="@+id/button_divide"
+                android:onClick="operationFn"
+                android:layout_marginEnd="@dimen/margin_eight"
+                style="@style/button_style"
                 />
         </LinearLayout>
 
@@ -107,35 +97,29 @@
             android:orientation="horizontal"
             android:weightSum="4">
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/button_four"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
+                android:id="@+id/button_four"
+                android:onClick="operationFn"
+                style="@style/button_style"
                 />
-
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/button_five"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
+                android:id="@+id/button_five"
+                android:onClick="operationFn"
+                style="@style/button_style"
                 />
-
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/button_six"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
+                android:id="@+id/button_six"
+                android:onClick="operationFn"
+                style="@style/button_style"
                 />
-
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/button_multiply"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
+                android:id="@+id/button_multiply"
+                android:onClick="operationFn"
+                android:layout_marginEnd="@dimen/margin_eight"
+                style="@style/button_style"
                 />
         </LinearLayout>
 
@@ -145,35 +129,29 @@
             android:orientation="horizontal"
             android:weightSum="4">
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/button_one"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
+                android:id="@+id/button_one"
+                android:onClick="operationFn"
+                style="@style/button_style"
                 />
-
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/button_two"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
+                android:id="@+id/button_two"
+                android:onClick="operationFn"
+                style="@style/button_style"
                 />
-
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/button_three"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
+                android:id="@+id/button_three"
+                android:onClick="operationFn"
+                style="@style/button_style"
                 />
-
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/button_subtract"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
+                android:id="@+id/button_subtract"
+                android:onClick="operationFn"
+                android:layout_marginEnd="@dimen/margin_eight"
+                style="@style/button_style"
                 />
         </LinearLayout>
 
@@ -183,35 +161,29 @@
             android:orientation="horizontal"
             android:weightSum="4">
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/button_zero"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
+                android:id="@+id/button_zero"
+                android:onClick="operationFn"
+                style="@style/button_style"
                 />
-
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/button_dot"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
+                android:id="@+id/button_dot"
+                android:onClick="operationFn"
+                style="@style/button_style"
                 />
-
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/button_equal"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
+                android:id="@+id/button_equal"
+                android:onClick="operationFn"
+                style="@style/button_style"
                 />
-
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/button_add"
-                android:layout_weight="1"
-                android:textSize="@dimen/button_text_size"
+                android:id="@+id/button_add"
+                android:onClick="operationFn"
+                android:layout_marginEnd="@dimen/margin_eight"
+                style="@style/button_style"
                 />
         </LinearLayout>
     </LinearLayout>
