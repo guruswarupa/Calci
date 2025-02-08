@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="button_style">
-        <item name="android:layout_width">wrap_content</item>
+    <!-- General Button Style -->
+    <style name="NordButtonBase">
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">70dp</item>
-        <item name="android:layout_marginStart">@dimen/margin_eight</item>
-        <item name="android:layout_marginBottom">@dimen/margin_eight</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:layout_margin">@dimen/margin_four</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/button_bg</item>
+        <item name="android:textColor">@color/nord_fg</item>
     </style>
+
+    <style name="NordButton" parent="NordButtonBase">
+        <item name="android:backgroundTint">@color/nord_button</item>
+    </style>
+
+    <style name="NordButtonAccent" parent="NordButtonBase">
+        <item name="android:backgroundTint">@color/nord_accent</item>
+    </style>
+
+    <style name="NordButtonSecondary" parent="NordButtonBase">
+        <item name="android:backgroundTint">@color/nord_secondary</item>
+    </style>
+
 </resources>

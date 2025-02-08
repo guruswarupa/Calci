@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="edit_text_border_color">#a6a1a1</color>
+    <color name="nord_bg">#2E3440</color>
+    <color name="nord_fg">#D8DEE9</color>
+    <color name="nord_button">#434C5E</color>
+    <color name="nord_secondary">#4C566A</color>
+    <color name="nord_accent">#81A1C1</color>
+    <color name="nord_input_bg">#3B4252</color>
+    <color name="nord_border">#4C566A</color>
+    <color name="nord_shadow">#2E3440</color>
 </resources>

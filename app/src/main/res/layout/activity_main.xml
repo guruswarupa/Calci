@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    >
+    android:background="@color/nord_bg"
+    tools:context=".MainActivity">
 
+    <!-- Display for Input -->
     <EditText
         android:id="@+id/number_edit_text"
         android:layout_width="match_parent"
@@ -13,178 +14,69 @@
         android:layout_margin="@dimen/margin_sixteen"
         android:hint="@string/edit_text_hint"
         android:importantForAutofill="no"
-        android:inputType="number"
-        android:padding="@dimen/padding_eight"
-        android:background="@drawable/edit_text_border"
+        android:inputType="text"
+        android:padding="@dimen/padding_sixteen"
+        android:background="@drawable/edit_text_stylized"
+        android:gravity="end|center_vertical"
+        android:textSize="36sp"
+        android:textColor="@color/nord_fg"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:elevation="4dp"
+        android:shadowColor="@color/nord_shadow"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
         android:layout_alignParentTop="true"/>
 
+
+    <!-- Buttons Container -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_alignParentBottom="true"
-        >
+        android:padding="@dimen/margin_eight">
 
+        <!-- Row 1: Special Functions -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="4">
-            <Button
-                android:text="@string/button_del"
-                android:id="@+id/button_del"
-                android:onClick="operationFn"
-                style="@style/button_style" />
+            android:orientation="horizontal">
 
-            <Button
-                android:text="@string/button_power"
-                android:id="@+id/button_power"
-                android:onClick="operationFn"
-                style="@style/button_style"
-                />
-
-            <Button
-                android:text="@string/button_percentage"
-                android:id="@+id/button_percentage"
-                android:onClick="operationFn"
-                style="@style/button_style"
-                />
-
-            <Button
-                android:text="@string/button_clr"
-                android:id="@+id/button_clr"
-                android:onClick="operationFn"
-                android:layout_marginEnd="@dimen/margin_eight"
-                style="@style/button_style"
-                />
+            <Button android:id="@+id/button_del" android:text="@string/button_del" style="@style/NordButtonSecondary" android:onClick="operationFn"/>
+            <Button android:id="@+id/button_power" android:text="@string/button_power" style="@style/NordButtonSecondary" android:onClick="operationFn"/>
+            <Button android:id="@+id/button_percentage" android:text="@string/button_percentage" style="@style/NordButtonSecondary" android:onClick="operationFn"/>
+            <Button android:id="@+id/button_clr" android:text="@string/button_clr" style="@style/NordButtonAccent" android:onClick="operationFn"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="4">
-            <Button
-                android:text="@string/button_seven"
-                android:id="@+id/button_seven"
-                android:onClick="operationFn"
-                style="@style/button_style"
-                />
-            <Button
-                android:text="@string/button_eight"
-                android:id="@+id/button_eight"
-                android:onClick="operationFn"
-                style="@style/button_style"
-                />
-            <Button
-                android:text="@string/button_nine"
-                android:id="@+id/button_nine"
-                android:onClick="operationFn"
-                style="@style/button_style"
-                />
-            <Button
-                android:text="@string/button_divide"
-                android:id="@+id/button_divide"
-                android:onClick="operationFn"
-                android:layout_marginEnd="@dimen/margin_eight"
-                style="@style/button_style"
-                />
+        <!-- Row 2: Numbers and Operators -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/button_seven" android:text="@string/button_seven" style="@style/NordButton" android:onClick="operationFn"/>
+            <Button android:id="@+id/button_eight" android:text="@string/button_eight" style="@style/NordButton" android:onClick="operationFn"/>
+            <Button android:id="@+id/button_nine" android:text="@string/button_nine" style="@style/NordButton" android:onClick="operationFn"/>
+            <Button android:id="@+id/button_divide" android:text="@string/button_divide" style="@style/NordButtonAccent" android:onClick="operationFn"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="4">
-            <Button
-                android:text="@string/button_four"
-                android:id="@+id/button_four"
-                android:onClick="operationFn"
-                style="@style/button_style"
-                />
-            <Button
-                android:text="@string/button_five"
-                android:id="@+id/button_five"
-                android:onClick="operationFn"
-                style="@style/button_style"
-                />
-            <Button
-                android:text="@string/button_six"
-                android:id="@+id/button_six"
-                android:onClick="operationFn"
-                style="@style/button_style"
-                />
-            <Button
-                android:text="@string/button_multiply"
-                android:id="@+id/button_multiply"
-                android:onClick="operationFn"
-                android:layout_marginEnd="@dimen/margin_eight"
-                style="@style/button_style"
-                />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/button_four" android:text="@string/button_four" style="@style/NordButton" android:onClick="operationFn"/>
+            <Button android:id="@+id/button_five" android:text="@string/button_five" style="@style/NordButton" android:onClick="operationFn"/>
+            <Button android:id="@+id/button_six" android:text="@string/button_six" style="@style/NordButton" android:onClick="operationFn"/>
+            <Button android:id="@+id/button_multiply" android:text="@string/button_multiply" style="@style/NordButtonAccent" android:onClick="operationFn"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="4">
-            <Button
-                android:text="@string/button_one"
-                android:id="@+id/button_one"
-                android:onClick="operationFn"
-                style="@style/button_style"
-                />
-            <Button
-                android:text="@string/button_two"
-                android:id="@+id/button_two"
-                android:onClick="operationFn"
-                style="@style/button_style"
-                />
-            <Button
-                android:text="@string/button_three"
-                android:id="@+id/button_three"
-                android:onClick="operationFn"
-                style="@style/button_style"
-                />
-            <Button
-                android:text="@string/button_subtract"
-                android:id="@+id/button_subtract"
-                android:onClick="operationFn"
-                android:layout_marginEnd="@dimen/margin_eight"
-                style="@style/button_style"
-                />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/button_one" android:text="@string/button_one" style="@style/NordButton" android:onClick="operationFn"/>
+            <Button android:id="@+id/button_two" android:text="@string/button_two" style="@style/NordButton" android:onClick="operationFn"/>
+            <Button android:id="@+id/button_three" android:text="@string/button_three" style="@style/NordButton" android:onClick="operationFn"/>
+            <Button android:id="@+id/button_subtract" android:text="@string/button_subtract" style="@style/NordButtonAccent" android:onClick="operationFn"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="4">
-            <Button
-                android:text="@string/button_zero"
-                android:id="@+id/button_zero"
-                android:onClick="operationFn"
-                style="@style/button_style"
-                />
-            <Button
-                android:text="@string/button_dot"
-                android:id="@+id/button_dot"
-                android:onClick="operationFn"
-                style="@style/button_style"
-                />
-            <Button
-                android:text="@string/button_equal"
-                android:id="@+id/button_equal"
-                android:onClick="operationFn"
-                style="@style/button_style"
-                />
-            <Button
-                android:text="@string/button_add"
-                android:id="@+id/button_add"
-                android:onClick="operationFn"
-                android:layout_marginEnd="@dimen/margin_eight"
-                style="@style/button_style"
-                />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/button_zero" android:text="@string/button_zero" style="@style/NordButton"  android:onClick="operationFn"/>
+            <Button android:id="@+id/button_dot" android:text="@string/button_dot" style="@style/NordButton" android:onClick="operationFn"/>
+            <Button android:id="@+id/button_equal" android:text="@string/button_equal" style="@style/NordButtonAccent" android:onClick="operationFn"/>
+            <Button android:id="@+id/button_add" android:text="@string/button_add" style="@style/NordButtonAccent" android:onClick="operationFn"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
